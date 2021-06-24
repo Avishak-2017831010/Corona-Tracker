@@ -1,0 +1,14 @@
+#logo{
+    height: 50px;
+    width: 180px;
+    object-fit: cover;    
+    
+}
+
+#navbarNav{
+    height: 50px;
+}
+
+.NavbarCom{
+    margin-top: 10px;
+}

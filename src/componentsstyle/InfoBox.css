@@ -1,0 +1,47 @@
+.InfoBox_info{   
+    width: 70%;
+    margin: 20px 50px;
+    
+    justify-content: center;        
+}
+
+.InfoBox_info:hover{   
+    cursor: pointer;
+
+}
+
+.info h3{
+    font-weight: bold;
+    color: black;
+}
+
+.infoboxCard{
+    border-radius: 50px;
+    
+}
+
+.cardImage{
+    height: 230px;
+    object-fit: cover;
+}
+
+.cardTitle{
+    
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+.liveCases{
+    margin: 5px 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.table{
+    height: 400px;
+    overflow:auto; 
+    
+}
+
+.table td{
+    padding: 0.5rem;
+}
+
+.table tr{
+    background-color: brown;
+    color: beige;
+}
+
+.tableData tr:nth-of-type(odd){
+    color: brown;
+    font-weight: bold;
+}

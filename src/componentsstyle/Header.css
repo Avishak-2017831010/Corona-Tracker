@@ -1,0 +1,57 @@
+.header{    
+    margin-bottom: 20px;   
+}
+
+#worldwide{
+    font-weight: bold;
+}
+
+#header_title{
+    margin-left: 30px;
+}
+
+.header_dropdown{
+    background-color: #e0f0ff;
+    margin-top: 10px;
+    border: none;
+    width: min-content;
+    float: right;
+    
+}
+
+#header_dropdown_select{
+    color: midnightblue;
+    font-weight: bolder;
+
+}
+
+.app_right{
+   margin: 10px 30px;
+}
+
+.app_infobox{
+    margin-top: 100px;
+}
+
+.topBody{
+   margin: 5px;
+}
+
+
+.cardHeader{
+    color: white;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 50px;
+    
+}
+
+#headeradvice{
+    margin-top: 20px;
+}
+
+.app_dropdown{
+    padding-left: 30px;
+}
+
+
