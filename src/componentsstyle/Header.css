@@ -1,57 +1,73 @@
-.header{    
-    margin-bottom: 20px;   
+.header {
+  margin-bottom: 20px;
 }
 
-#worldwide{
-    font-weight: bold;
+#worldwide {
+  font-weight: bold;
 }
 
-#header_title{
-    margin-left: 30px;
+#header_title {
+  margin-left: 30px;
 }
 
-.header_dropdown{
-    background-color: #e0f0ff;
-    margin-top: 10px;
-    border: none;
-    width: min-content;
-    float: right;
-    
+.app_dropdown {
+  border-radius: 20px;
 }
 
-#header_dropdown_select{
-    color: midnightblue;
-    font-weight: bolder;
-
+.header_dropdown {
+  margin: 10px 5px;
 }
 
-.app_right{
-   margin: 10px 30px;
+#header_dropdown_select {
+  color: #16c1c9;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
-.app_infobox{
-    margin-top: 100px;
+.app_right {
+  margin: 10px 30px;
 }
 
-.topBody{
-   margin: 5px;
+.app_infobox {
+  margin-top: 100px;
+}
+
+.topBody {
+  
+}
+
+.cardHeader {
+  color: white;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 50px;
+}
+
+#headeradvice {
+  margin-top: 20px;
+}
+
+.mainBody {
+}
+
+#dropdown {
+  margin: 0px 30px;
+}
+
+.UpdateNews {
+  width: 100%;
+}
+
+#midimage img {
+  height: 550px;
+  object-fit: cover;
+  width: 400px;
 }
 
 
-.cardHeader{
-    color: white;
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    font-size: 50px;
-    
+#secondMiddleImage img {
+  height: 550px;
+  object-fit: cover;
+  width: 300px;
+  margin-top: 50px;
 }
-
-#headeradvice{
-    margin-top: 20px;
-}
-
-.app_dropdown{
-    padding-left: 30px;
-}
-
-

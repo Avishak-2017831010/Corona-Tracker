@@ -13,7 +13,11 @@ function LiveCases({countries}) {
       <th>#</th>
       <th>Country</th>
       <th>Cases</th>
-      <th>Deaths</th>      
+      <th>Deaths</th>       
+      <th>Active</th> 
+      <th>Critical</th>
+      <th>Tests</th> 
+         
     </tr>
   </thead>
   
@@ -27,6 +31,9 @@ function LiveCases({countries}) {
       <td>{country.country}</td>
       <td>{country.cases}</td>
       <td>{country.deaths}</td>      
+      <td>{country.active}</td>
+      <td>{country.critical}</td>  
+      <td>{country.tests}</td>    
     </tr>
     
   </tbody>

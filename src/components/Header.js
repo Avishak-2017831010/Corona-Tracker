@@ -22,8 +22,7 @@ function Header() {
     
     
 
-    useEffect(() => {
-        
+    useEffect(() => {       
         const getCountriesData=async()=>{
             await fetch("https://disease.sh/v3/covid-19/countries")
             .then((res)=>res.json())
@@ -54,31 +53,31 @@ function Header() {
         
     }, [])
 
-    
+   
+
 
     const OnCountryChange=async(e)=>{
         const countrycode=e.target.value
          
-
-        // console.log(countrycode)
-
         const url=countrycode==="worldwide" ? "https://disease.sh/v3/covid-19/all" : 
         `https://disease.sh/v3/covid-19/countries/${countrycode}`
 
+       
         await fetch(url)
         .then(res=>res.json())
         .then(data=>{
              setinitial(countrycode)
              setcountryInfo(data)
             
-        }).catch(err=>console.log(err))
-
-        console.log(countryInfo)
+        }).catch(err=>console.log(err))        
     }
 
-    return (
+    console.log(countryInfo)
 
-        
+    
+
+    
+    return (
 
         <div className="AppClass">
         
@@ -90,77 +89,61 @@ function Header() {
         <Col id="logoSection" md={4}>
         <NavbarCom/>
         </Col>
-
-        <Col id="dropdown" md={{ span: 4, offset: 4 }}>
-
-            <div className="header_dropdown">
-                <FormControl className="app_dropdown">
-                <Select id="header_dropdown_select" value={initial} variant="outlined" onChange={OnCountryChange}>
-                <MenuItem value="worldwide">WorldWide</MenuItem>               
-                    {
-                        countries.map(country=>(
-                            <MenuItem value={country.value}>{country.name}</MenuItem>
-                        ))
-                    }    
-                </Select>                  
-                </FormControl>
-            </div> 
-
-        </Col>    
+   
             </Row> 
         </div>
 
         <Intro/>
 
+        <div className="UpdateNews">
+        
+        <Row id="dropdown">
+            <Col>
+            <div className="header_dropdown">
+            <FormControl className="app_dropdown">
+            <Select id="header_dropdown_select" value={initial} variant="outlined" onChange={OnCountryChange}>
+            <MenuItem value="worldwide">WorldWide</MenuItem>               
+                {
+                    countries.map(country=>(
+                        <MenuItem value={country.value}>{country.name}</MenuItem>
+                    ))
+                }    
+            </Select>                  
+            </FormControl>
+            </div>
+            </Col> 
+        </Row>
 
-        <Card id="card" style={{ border:'0 solid transparent' }}>
         
             
+        <Container>
+        <div className="mainBody">
+            <Row>                              
+                <Col xs="12" md="4">
+                    <InfoBox title="Cases" 
+                    cases={countryInfo.todayCases} 
+                    total={countryInfo.cases}
+                    imagesrc="https://i.ibb.co/sVqDbPV/Preventing-Covid-19-Instagram-Post-7.png"/> 
+                </Col>
 
+                <Col xs="12" md="4">
+                    <InfoBox title="Deaths" 
+                    cases={countryInfo.todayDeaths} 
+                    total={countryInfo.deaths}
+                    imagesrc="https://i.ibb.co/QM8yDG2/cdc-w9-KEokhaj-Kw-unsplash.jpg"/> 
+                </Col>
 
-            <Card.ImgOverlay>
-            <Card.Body className="cardBody">
-
-            
-
-
-            
-            <Col xs="12">
-            <div  className="app_left">                  
-                    <div className="app_infobox">
-                        <Row>
-                            <Col xs="12" md="4">
-                            <InfoBox title="Cases" 
-                            cases={countryInfo.todayCases} 
-                            total={countryInfo.cases}
-                            imagesrc="https://i.ibb.co/sVqDbPV/Preventing-Covid-19-Instagram-Post-7.png"/> 
-                            </Col>
-
-                            <Col xs="12" md="4">
-                            <InfoBox title="Deaths" 
-                            cases={countryInfo.todayDeaths} 
-                            total={countryInfo.deaths}
-                            imagesrc="https://i.ibb.co/QM8yDG2/cdc-w9-KEokhaj-Kw-unsplash.jpg"/> 
-                            </Col>
-
-                            <Col xs="12" md="4">
-                            <InfoBox title="Recovered" 
-                            cases={countryInfo.todayRecovered} 
-                            total={countryInfo.recovered}
-                            imagesrc="https://i.ibb.co/C82HJ19/martin-sanchez-Q-rw-B5-ECC2-Y-unsplash.jpg"
-                            /> 
-                            </Col>
-                        </Row>    
-                    </div>                  
-            </div>
-            </Col>     
-            </Card.Body>
-            </Card.ImgOverlay>
-
-
-        </Card>
-  
-
+                <Col xs="12" md="4">
+                    <InfoBox title="Recovered" 
+                    cases={countryInfo.todayRecovered} 
+                    total={countryInfo.recovered}
+                    imagesrc="https://i.ibb.co/C82HJ19/martin-sanchez-Q-rw-B5-ECC2-Y-unsplash.jpg"
+                     /> 
+                </Col>                
+            </Row>
+        </div>
+        </Container>  
+        </div>
         </div>
 
 
@@ -169,29 +152,29 @@ function Header() {
 
 
             
+        <div className="app_body">
+            <Row>
 
-        <div className="container-fluid app_body">
-         <Row>
-           
+            <Col xs="12" md="2" id="midimage">
+                <img src="https://i.ibb.co/wrCvnRz/Untitled-design-3.png"/>
+            </Col>
+                <Col xs="12" md="4">
+                <div className="app_right">                                        
+                <LiveCases countries={tabledata}/>                                                                
+                </div>
+                </Col>
 
-         <Col xs="12" md="3">
-         <div className="app_right">                                        
-         <LiveCases countries={tabledata}/>
-         <CasesByGraph/>                                                                 
-         </div>
-         </Col>
-         </Row>
+                <Col xs="12" md="4">
+                    <CasesByGraph/>
+                </Col>
 
-            
-            
-            
-
-                       
-                  
-
+            <Col xs="12" md="2" id="secondMiddleImage">
+                <img src="https://i.ibb.co/wh9DNCn/Untitled-design-4.png"/>
+            </Col>
+            </Row>                                  
+        </div>
          
 
-        </div> 
         </div>
 
         
