@@ -24,17 +24,13 @@
   font-size: 15px;
 }
 
-.app_right {
-  margin: 10px 30px;
-}
+
 
 .app_infobox {
   margin-top: 100px;
 }
 
-.topBody {
-  
-}
+
 
 .cardHeader {
   color: white;
@@ -47,8 +43,7 @@
   margin-top: 20px;
 }
 
-.mainBody {
-}
+
 
 #dropdown {
   margin: 0px 30px;
@@ -61,7 +56,9 @@
 #midimage img {
   height: 550px;
   object-fit: cover;
-  width: 400px;
+  width: 300px;
+  justify-content: center;
+  margin: 10px auto;
 }
 
 
@@ -69,5 +66,10 @@
   height: 550px;
   object-fit: cover;
   width: 300px;
-  margin-top: 50px;
+  margin: 50px auto;
+  justify-content: center;
+}
+
+.app_body{
+    margin-top: 50px;
 }

@@ -9,6 +9,7 @@ import CasesByGraph from './CasesByGraph';
 import {sortData} from './utils.js'
 import NavbarCom from './NavbarCom'
 import Intro from './Intro'
+import "leaflet/dist/leaflet.css"
 
 
 
@@ -19,6 +20,9 @@ function Header() {
     const [initial,setinitial]=useState('worldwide')
     const [countryInfo,setcountryInfo]=useState({});
     const [tabledata,setTableData]=useState([]);
+    const [mapCenter,setmapCenter]=useState({lat:34.80746,lng:-40.4796})
+    const [mapZoom,setmapZoom]=useState(3)
+    const [MapCountries,setMapCountries]=useState([])
     
     
 
@@ -39,6 +43,7 @@ function Header() {
 
                 setTableData(sortedData)
                 setCountries(countries)
+                setMapCountries(data)
             })
         }
         getCountriesData()
@@ -68,6 +73,8 @@ function Header() {
         .then(data=>{
              setinitial(countrycode)
              setcountryInfo(data)
+             setmapCenter([data.countryInfo.lat,data.countryInfo.long])
+             setmapZoom(4)
             
         }).catch(err=>console.log(err))        
     }
@@ -116,7 +123,8 @@ function Header() {
 
         
             
-        <Container>
+        <Container>.
+
         <div className="mainBody">
             <Row>                              
                 <Col xs="12" md="4">
@@ -151,6 +159,7 @@ function Header() {
 
 
 
+
             
         <div className="app_body">
             <Row>
@@ -173,7 +182,14 @@ function Header() {
             </Col>
             </Row>                                  
         </div>
-         
+        
+        <Container>
+            <Map
+            countries={MapCountries}
+            center={mapCenter}
+            zoom={mapZoom}/>
+        </Container>
+        
 
         </div>
 

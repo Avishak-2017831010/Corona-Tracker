@@ -18,7 +18,7 @@ function InfoBox({title,cases,total,imagesrc}) {
                 <p className="cardTitle">{title}</p>                
                 <p id="newCases"> +{cases}</p>  
                   <br/>
-                <p id="totalCases">Total : {total}</p>  
+                <p id="totalCases">Total : <br/>{total}</p>  
                 </Col>
 
                 <Col>
