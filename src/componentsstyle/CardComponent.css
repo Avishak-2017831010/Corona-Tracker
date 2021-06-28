@@ -1,0 +1,26 @@
+#cardcomponent{
+    margin: 20px;
+    border-radius: 20px;
+    transition: transform 1s;
+    height: 330px;
+    width: 300px;
+}
+
+#cardcomponent:hover{
+    cursor: pointer;
+}
+
+#cardImage{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #edebec;
+    margin: 20px auto;
+}
+
+#cardtitle{
+    font-size: 20px;
+    text-align: center;
+}
+

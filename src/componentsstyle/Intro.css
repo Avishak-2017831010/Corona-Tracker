@@ -8,7 +8,7 @@
     font-size: 35px;
     justify-content: center;
     font-family: 'Paytone One', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     margin: 50px 0px 20px 0px;
     color: #10a1a3;
     text-shadow: 1px 1px rgb(65, 65, 65)
@@ -17,4 +17,6 @@
 #subtitle{
     font-size: 20px;
     font-family: 'Spectral', serif;
+    font-weight: 200;
+    
 }

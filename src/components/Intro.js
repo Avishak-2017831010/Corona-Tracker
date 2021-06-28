@@ -12,11 +12,11 @@ function Intro() {
                 
                     <Col xs="12" md="6" md={{offset: 1}} id="introLeft">
                         <p id="title">Some Prevention Can Save The Whole World</p>
-                        <p id="subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus ullam id aliquam excepturi exercitationem provident repellat distinctio consequatur quidem cumque non inventore cum ratione, hic commodi architecto magnam cupiditate dolorum!</p>
+                        <p id="subtitle">Covid-19 will reshape the world. We don't yet know when the crisis will end. But we can be sure that by the times it does,our world will look very different</p>
                     </Col>
                     <Col xs="12" md="6">
                     <div className="introImage">
-                        <img src="https://i.ibb.co/RYL3RqN/Untitled-design-1.png"/>
+                        <img src="https://i.ibb.co/ww8BXsC/Covid.png"/>
                     </div>
                     </Col>
 

@@ -1,13 +1,21 @@
+
 .InfoBox_info{   
-    width: 70%;
+    width: 80%;
     margin: 20px 50px;
     box-shadow: 1px 2px 5px rgb(187, 187, 187);
-    background: #EDEBEC;
-
+    background: #f8f9fa;
+    border-radius: 20px;
+    transition: transform .2s linear;
+    overflow: hidden;
+    box-sizing: border-box;
+  
 }
 
 .InfoBox_info:hover{   
     cursor: pointer;
+    transform: scale(1.1);
+    background: #16c1c9;
+    color: white;
 }
 
 .info h3{
@@ -17,25 +25,23 @@
 
 .cardTitle{    
     font-family: 'Bodoni Moda', serif;
-    font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 20px;
     margin-left: 15px;
 }
 
 #newCases{
     margin-left: 15px;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 .cardIcon img{
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 80px;
     object-fit: cover;
-    border-radius: 50px;
     float: right;
     margin: 10px;
-    box-shadow: 1px 2px 2px gray;
 }
 
 #totalCases{

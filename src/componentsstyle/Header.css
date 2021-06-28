@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box71;
+}
+
+
 .header {
   margin-bottom: 20px;
 }
@@ -72,4 +77,38 @@
 
 .app_body{
     margin-top: 50px;
+}
+
+.mainBody{
+  position: relative;
+}
+
+.RowInfo{
+  position: sticky;
+  top: 0;
+}
+
+.frontliners{
+  width: 100%;
+  height: 400px;
+}
+.frontliners img{
+  object-fit: cover;
+  width: auto;
+  width: 80%;
+  margin: 10px 40px;
+}
+
+
+.BottomSection{
+  margin-top: 50px;
+}
+
+.cardSection{
+  background: #16c1c9;
+  margin: 20px;
+}
+
+.footer{
+  text-align: center;
 }

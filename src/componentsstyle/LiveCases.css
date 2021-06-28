@@ -1,25 +1,33 @@
 .liveCases{
-    margin: 5px 5px;
     padding: 5px;
     overflow: hidden;
 }
 
 .table{
-    height: 400px;
-    overflow:auto; 
-    
+    height: 800px;
+    overflow:auto;
+    text-align: center;
+    margin: 10px 10px;
+    width: 90%;   
+}
+
+.table th{
+    position: sticky;
+    top:0;  
+    background-color: #16c1c9;
+    color: beige; 
 }
 
 .table td{
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 
 .table tr{
-    background-color: brown;
+    background-color: #16c1c9;
     color: beige;
 }
 
 .tableData tr:nth-of-type(odd){
-    color: brown;
+    color: black;
     font-weight: bold;
 }

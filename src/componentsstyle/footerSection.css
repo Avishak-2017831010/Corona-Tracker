@@ -1,0 +1,18 @@
+#footertitle{
+    font-size: 20px;
+}
+
+.footerSection{
+    padding: 10px;
+}
+
+#icon{
+    margin: 0px 5px;
+}
+
+#icon:hover{
+    color: #16c1c9;
+    cursor: pointer;
+}
+
+
