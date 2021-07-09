@@ -12,6 +12,7 @@ import Intro from './Intro'
 import FaqSection from './FaqSection'
 import CardComponent from './CardComponent'
 import FooterSection from './FooterSection'
+import { prettyPrintStat } from './utils.js'
 import "leaflet/dist/leaflet.css"
 
 
@@ -26,6 +27,7 @@ function Header() {
     const [mapCenter,setmapCenter]=useState({lat:34.80746,lng:-40.4796})
     const [mapZoom,setmapZoom]=useState(3)
     const [MapCountries,setMapCountries]=useState([])
+    const [casesType,setCasesType]=useState('cases')
     
     
 
@@ -131,31 +133,30 @@ function Header() {
                                                      
                 <Col xs="12" md="3">
                     <InfoBox title="Cases" 
-                    cases={countryInfo.todayCases} 
-                    total={countryInfo.cases}
+                    active={casesType==="cases"}
+                    onClick={e=>setCasesType('cases')}
+                    cases={prettyPrintStat(countryInfo.todayCases)} 
+                    total={prettyPrintStat(countryInfo.cases)}
                     imagesrc="https://i.ibb.co/vHjdTrJ/Untitled-design-5.png"/> 
                 </Col>               
 
                 <Col xs="12" md="3">
                     <InfoBox title="Recovered" 
-                    cases={countryInfo.todayRecovered} 
-                    total={countryInfo.recovered}
+                    active={casesType==="recovered"}
+                    onClick={e=>setCasesType('recovered')}
+                    cases={prettyPrintStat(countryInfo.todayRecovered)} 
+                    total={prettyPrintStat(countryInfo.recovered)}
                     imagesrc="https://i.ibb.co/Qb65Bg4/Untitled-design-7.png"
                      /> 
                 </Col>
 
-                <Col xs="12" md="3">
-                    <InfoBox title="Active" 
-                    
-                    total={countryInfo.active}
-                    imagesrc="https://i.ibb.co/ng9gLqd/Untitled-design-8.png"
-                     /> 
-                </Col> 
                 
                 <Col xs="12" md="3">
                     <InfoBox title="Deaths" 
-                    cases={countryInfo.todayDeaths} 
-                    total={countryInfo.deaths}
+                    active={casesType==='deaths'}
+                    onClick={e=>setCasesType('deaths')}
+                    cases={prettyPrintStat(countryInfo.todayDeaths)} 
+                    total={prettyPrintStat(countryInfo.deaths)}
                     imagesrc="https://i.ibb.co/wQNdzmz/Untitled-design-9.png"/> 
                 </Col>
             
@@ -169,7 +170,7 @@ function Header() {
                 <Col xs="12" md="6">
 
                 <Row>
-                <CasesByGraph/>
+                <CasesByGraph casesType={casesType}/>
                 </Row>
 
                     <div className="app_right">                                        
@@ -184,7 +185,9 @@ function Header() {
                     <Map
                         countries={MapCountries}
                         center={mapCenter}
-                        zoom={mapZoom}/>
+                        zoom={mapZoom}
+                        casesType={casesType}
+                        />
                     </div>
 
                     <Row>

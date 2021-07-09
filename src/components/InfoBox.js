@@ -2,9 +2,10 @@ import React from 'react'
 import {Card,Row,Col} from 'react-bootstrap';
 import '../componentsstyle/InfoBox.css'
 
-function InfoBox({title,cases,total,imagesrc}) {
+function InfoBox({title,cases,total,imagesrc,active,...props}) {
     return (
-        <div className="InfoBox_info">                 
+        <div className={`InfoBox_info ${active && "selected--infobox"}`} onClick={props.onClick}>
+
               <Row>
                 <Col>
                   <p className="cardTitle">{title}</p>                

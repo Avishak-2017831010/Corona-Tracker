@@ -50,6 +50,10 @@
     font-weight: 500;
 }
 
+.selected--infobox{
+    border-bottom: 10px solid gray;
+}
+
 
 
 

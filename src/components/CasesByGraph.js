@@ -63,7 +63,8 @@ const buildChartData=(data,casesType="cases")=>{
           chartData.push(newDataPoint)
       }
 
-      lastDataPoint=data[casesType][date]
+     casesType==='active'? lastDataPoint=data[casesType] : lastDataPoint=data[casesType][date]
+     console.log(data)
   }
 
   return chartData;
@@ -73,6 +74,7 @@ function CasesByGraph({casesType="cases"}) {
 
     const url="https://disease.sh/v3/covid-19/historical/all?lastdays=120"
     const [data, setData] = useState({})
+    const {active,setactive}=useState({})
     useEffect(() => {
 
         const fetchData=async()=>{
@@ -105,7 +107,7 @@ function CasesByGraph({casesType="cases"}) {
                 backgroundColor: "rgba(204, 16, 52, 0.5)",
                 borderColor: "#CC1034",
                 data: data,
-                label:'WorldWide Cases By Graph'
+                label:`${casesType}`
                 
               },
             ],
